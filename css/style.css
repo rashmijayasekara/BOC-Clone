@@ -1,0 +1,41 @@
+@import url(resetcss.css);
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+
+.clear-fix{
+    clear: both;  
+}
+
+/* /*Typography */
+h1{
+    font-size: 2rem;
+    line-height: 2.2rem;
+}
+h2{
+    font-size: 1.8rem;
+    line-height: 2.0rem;
+}
+h3{
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+}
+h4{
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
+h5{
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+}
+h6{
+    font-size: 0.8rem;
+    line-height: 1rem;
+}
+   
