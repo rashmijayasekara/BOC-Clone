@@ -12,6 +12,11 @@ body{
 .clear-fix{
     clear: both;  
 }
+.clear-fix::after{
+    display: block;
+    content: "";
+    clear: both;
+}
 
 /* /*Typography */
 h1{
@@ -39,3 +44,351 @@ h6{
     line-height: 1rem;
 }
    
+/* Layout ===================================================================  */
+#app-row{
+    background-color: white;
+    height: 80px;
+}
+#nav-row{
+    background-color: #231f20;;
+    height: 60px;
+}
+#misc-row{
+    text-align: right;
+    background-color: yellow;
+    padding: 4px 0;
+    
+}
+.container{
+    width:1170px;
+    margin: 0 auto;
+}
+#app-row>.container{
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#logo{
+    height: 60px;
+
+
+}
+#app-row>.container>.wrapper{
+    float: right;
+    /* width: 70%; */
+    height: 100%;
+}
+#app-row>.container>.wrapper>.row:nth-child(1){
+    
+}
+#app-row>.container>.wrapper>.row:nth-child(2){
+   
+    
+}
+#app-row>.container>.wrapper>.row:nth-child(2){
+    padding-top: 5px;
+}
+#nav-lang{
+    float: right;
+
+}
+#nav-lang li{
+    float: left;
+    padding-left: 10px;
+    
+}
+#nav-lang li:not(#nav-lang li:last-child){
+    padding-right: 10px;
+}
+
+#nav-lang>li>a{
+    font-size: 0.9rem;
+    color: #231f20;
+    text-decoration: none;
+}
+#nav-lang>li>a:hover{
+    cursor: pointer;
+    color: #ff9d1e;
+    text-decoration: underline;
+}
+#col-1{
+    float: left;
+}
+#col-1>li{
+    float: right;
+    text-decoration: none;
+    padding-right: 20px;
+    padding-top: 15px;
+}
+#col-1>li>a{
+    text-decoration: none;
+    color: black;
+}
+#col-2{
+    float: right;
+}
+#col-2>ul>li{
+    float: left;
+    padding: 5px;
+    margin-left: 8px;
+}
+#col-2>ul>li>ion-icon:hover{
+    cursor: pointer;
+}
+ion-icon{
+    font-size: 1.2rem;
+    color: white;
+}
+#col-2>ul>li:nth-child(1){
+    background-color: blue;
+}
+#col-2>ul>li:nth-child(2){
+    background-color: yellow;
+}
+#col-2>ul>li:nth-child(3){
+    background-color: lightblue;
+}
+#col-2>ul>li:nth-child(4){
+    background-color: red;
+}
+/* nav-row ======================================================================================================================== */
+#nav-row nav li{
+    float: left;
+}
+#nav-row>.container>nav>li>a{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    padding: 22px;
+    color: white;
+}
+#nav-row>.container>nav>li>a:hover{
+    background-color:#ff9d1e;
+    color: black;
+    text-decoration: none;
+}
+#nav-row nav li a:hover::after{
+    position: absolute;
+    display: block;
+    content: "";
+    border-top: 10px solid #ff9d1e;
+    border-left: 8px solid transparent;
+    border-left: 8px solid transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+}
+#misc-row>.container{
+   display: inline-block;
+   width: 1170px;
+   margin: 0 auto;
+    
+}
+.misc-btn{
+    display: inline-block;
+    background-color: #107ece;
+    color: white;
+    border-bottom: 2px solid #0f027b;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 4px;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    
+}
+.misc-btn:hover{
+    background-color: #0865a9;
+    text-decoration: none;
+    color: black;
+
+}
+
+/* footer ======================================================= */
+footer #row{
+    background-color:rgb(38, 41, 41);
+}
+
+#copyright-row{
+    background-color: #ffde00;
+}
+
+#copyright-row>.container{
+    padding: 16px 0;
+    text-align: center;
+    padding-top: 10px;
+
+}
+#row>.container>.col{
+    height: 215px;
+    width: 25%;
+    float:left;
+    background-color: rgb(38, 41, 41);
+    padding-top: 10px;
+    text-decoration: none;
+    
+}
+footer>#row>.col>h3{
+    padding-bottom: 16px;
+}
+footer>#row .col ul li{
+    text-decoration: none;
+    padding: 5px;
+}
+footer>#row .col ul li{
+    line-height: 1.2rem;
+    
+}
+footer>#row .col ul li a{
+    color: white;
+    font-size: 0.75;
+}
+footer>#row .col ul li a:hover{
+    color: #ff9d1e;
+}
+footer>#row .col:last-child{
+    padding-left: 15px;
+    background-color: #515254;
+}
+
+footer>#row .col:last-child p{
+    background-color: #515254;
+    color: white;
+    padding-bottom: 8px;
+    font-size: 0.75rem;
+    line-height: 1.1rem;
+}
+#tel-2{
+    padding-left: 25px;
+}
+footer>#row{
+    position: relative;
+}
+footer> #row::after{
+    display: block;
+    content: "";
+    height: 215px;
+    background-color: #515254;
+    position: absolute;
+    width: 20%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    
+
+}
+
+aside{
+    background-color: #1f1f1f;
+    font-weight:bold;
+    position: fixed;
+    padding: 5px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    transform: rotate(270deg);
+    right: -38px;
+    bottom: 25%;
+    z-index: 9999;
+}
+aside a{
+    text-decoration: none;
+    color: white;
+    font-size: 0.8rem;
+}
+aside a ion-icon{
+
+    color: black;
+    font-size: 1rem;
+    vertical-align: middle;
+    
+}
+#bubble-wrapper{
+    position: relative;
+    display: inline-block;
+    background-color: #ffde00;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    padding: 4px;
+}
+
+aside:hover{
+    right:-31px
+}
+#bubble-wrapper::before{
+    display: block;
+    content: "";
+    background-color: #e0f80959;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+    border-radius: 100%;
+    width: 5px;
+    height: 5px;
+    animation: wave;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+
+}
+
+@keyframes wave{
+    from{
+        transform: scale(0);
+    }
+
+    to{
+        transform: scale(10);
+    }
+}
+
+
+/* =====================================    main    ========================================================================== */
+main>#row:first-child,
+main>#row:first-child>.container{
+    height: 90px;
+}
+#col-8{
+    padding: 20px 10px 0;
+    height: 100%;
+    float: left;
+    width: 75%;
+    background-color: white;
+}
+#col-9{
+    padding: 20px 10px 0;
+    height: 100%;
+    float: right;
+    background-color: white;
+    width: 25%;
+    
+}
+#flags{
+    float: right;
+}
+#flags>ul li{
+    float: left;
+    width: 20%;
+    padding-left: 80px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+}
+#div-flags-inside{
+    
+}
+
+#flags>ul li a:hover{
+    text-decoration: underline;
+}
+#flags>ul li a img{
+    border: 3px solid transparent;
+}
+#flags>ul li a:hover img{
+    border-color: #ffde00;
+}
